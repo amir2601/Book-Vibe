@@ -1,0 +1,172 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+        "review": "A powerful tale of racial injustice and the loss of innocence.",
+        "totalPages": 324,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Classics",
+            "Social Issues",
+            "American Literature"
+        ],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 2,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://covers.openlibrary.org/b/id/1535414-L.jpg",
+        "review": "A gripping dystopian novel that delves into the dangers of totalitarianism.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Dystopian",
+        "tags": [
+            "Political",
+            "Science Fiction",
+            "Classics"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 3,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://covers.openlibrary.org/b/id/9207623-L.jpg",
+        "review": "An enduring love story with witty commentary on social expectations.",
+        "totalPages": 279,
+        "rating": 4.6,
+        "category": "Romance",
+        "tags": [
+            "Classics",
+            "Romance",
+            "British Literature"
+        ],
+        "publisher": "T. Egerton",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://covers.openlibrary.org/b/id/7352182-L.jpg",
+        "review": "A tragic story of love, wealth, and the American Dream.",
+        "totalPages": 180,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "Classics",
+            "American Literature",
+            "Social Issues"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 5,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://covers.openlibrary.org/b/id/8231821-L.jpg",
+        "review": "A thought-provoking story about teenage rebellion and self-discovery.",
+        "totalPages": 277,
+        "rating": 4.0,
+        "category": "Young Adult",
+        "tags": [
+            "Classics",
+            "Young Adult",
+            "American Literature"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 6,
+        "bookName": "Moby Dick",
+        "author": "Herman Melville",
+        "image": "https://covers.openlibrary.org/b/id/8100919-L.jpg",
+        "review": "An epic tale of adventure, revenge, and humanity.",
+        "totalPages": 585,
+        "rating": 4.2,
+        "category": "Adventure",
+        "tags": [
+            "Classics",
+            "Adventure",
+            "Sea Stories"
+        ],
+        "publisher": "Harper & Brothers",
+        "yearOfPublishing": 1851
+    },
+    {
+        "bookId": 7,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://covers.openlibrary.org/b/id/6979865-L.jpg",
+        "review": "A thrilling journey through Middle-earth filled with adventure and friendship.",
+        "totalPages": 310,
+        "rating": 4.7,
+        "category": "Fantasy",
+        "tags": [
+            "Fantasy",
+            "Adventure",
+            "Epic"
+        ],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    },
+    {
+        "bookId": 8,
+        "bookName": "The Alchemist",
+        "author": "Paulo Coelho",
+        "image": "https://covers.openlibrary.org/b/id/8379896-L.jpg",
+        "review": "An inspirational journey of a shepherd in search of his personal legend.",
+        "totalPages": 208,
+        "rating": 4.5,
+        "category": "Philosophical Fiction",
+        "tags": [
+            "Spirituality",
+            "Philosophy",
+            "Adventure"
+        ],
+        "publisher": "HarperOne",
+        "yearOfPublishing": 1988
+    },
+    {
+        "bookId": 9,
+        "bookName": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "image": "https://covers.openlibrary.org/b/id/8285321-L.jpg",
+        "review": "A profound and passionate narrative of love, morality, and resilience.",
+        "totalPages": 507,
+        "rating": 4.6,
+        "category": "Romance",
+        "tags": [
+            "Classics",
+            "Romance",
+            "Gothic"
+        ],
+        "publisher": "Smith, Elder & Co.",
+        "yearOfPublishing": 1847
+    },
+    {
+        "bookId": 10,
+        "bookName": "The Road",
+        "author": "Cormac McCarthy",
+        "image": "https://covers.openlibrary.org/b/id/8284154-L.jpg",
+        "review": "A haunting and poetic exploration of survival and fatherly love.",
+        "totalPages": 287,
+        "rating": 4.4,
+        "category": "Post-Apocalyptic",
+        "tags": [
+            "Dystopian",
+            "Survival",
+            "Literary Fiction"
+        ],
+        "publisher": "Alfred A. Knopf",
+        "yearOfPublishing": 2006
+    }
+]
