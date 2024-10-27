@@ -1,10 +1,11 @@
+import Books from "../Components/Books";
 import Hero from "../Components/Hero";
 
 const Home = () => {
     return (
-        <div>
-            this is home page
+        <div className="space-y-10 mb-10">
             <Hero></Hero>
+            <Books></Books>
         </div>
     );
 };
