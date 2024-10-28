@@ -9,20 +9,20 @@ const BookDetails = () => {
 
     const books = useLoaderData();
 
-    useEffect(() => {
-        const selectedBook = books.find(book => book.bookId == id);
-        setBook(selectedBook);
-    }, [id]);
-
     // useEffect(() => {
-    //     fetch('../../public/books.json')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             const selectedBook = data.find(book => book.bookId == id);
-    //             setBook(selectedBook);
-    //         })
-    //         .catch(error => console.error('Error fetching book data:', error));
+    //     const selectedBook = books.find(book => book.bookId == id);
+    //     setBook(selectedBook);
     // }, [id]);
+
+    useEffect(() => {
+        fetch('../../public/books.json')
+            .then(res => res.json())
+            .then(data => {
+                const selectedBook = data.find(book => book.bookId === parseInt(id));
+                setBook(selectedBook);
+            })
+            .catch(error => console.error('Error fetching book data:', error));
+    }, [id]);
 
     if (!book) {
         return <Loading></Loading>
@@ -34,7 +34,7 @@ const BookDetails = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-2 overflow-hidden rounded-md shadow-sm p-6">
+            <div className="grid md:grid-cols-2 overflow-hidden rounded-md shadow-sm md:p-6">
                 <div className="flex justify-center bg-slate-100">
                     <img src={book.image} alt={book.bookName} className="dark:bg-gray-500 aspect-auto" />
                 </div>
