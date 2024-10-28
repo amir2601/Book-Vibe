@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loading from './../Components/Loading';
 import { saveToLocalStorage } from "../Utils/LocalStorage";
 
@@ -7,7 +7,7 @@ const BookDetails = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
 
-    const books = useLoaderData();
+    // const books = useLoaderData();
 
     // useEffect(() => {
     //     const selectedBook = books.find(book => book.bookId == id);
@@ -28,8 +28,8 @@ const BookDetails = () => {
         return <Loading></Loading>
     };
 
-    const handleSetToLocalStorage = (bk) => {
-        saveToLocalStorage(bk)
+    const handleSetToLocalStorage = (bk, name) => {
+        saveToLocalStorage(bk, name)
     };
 
     return (
@@ -82,12 +82,12 @@ const BookDetails = () => {
                     </div>
 
                     <div className="flex gap-4">
-                        <button onClick={() => handleSetToLocalStorage(book)} className="relative rounded px-5 py-2.5 overflow-hidden group bg-neutral hover:bg-gradient-to-r hover:from-secondary hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
+                        <button onClick={() => handleSetToLocalStorage(book, 'reads')} className="relative rounded px-5 py-2.5 overflow-hidden group bg-neutral hover:bg-gradient-to-r hover:from-secondary hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
                             <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                             <span className="relative">Read</span>
                         </button>
 
-                        <button className="relative rounded px-5 py-2.5 overflow-hidden group bg-secondary hover:bg-gradient-to-r hover:from-neutral hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-neutral transition-all ease-out duration-300">
+                        <button onClick={() => handleSetToLocalStorage(book, 'wishlist')} className="relative rounded px-5 py-2.5 overflow-hidden group bg-secondary hover:bg-gradient-to-r hover:from-neutral hover:to-primary text-white hover:ring-2 hover:ring-offset-2 hover:ring-neutral transition-all ease-out duration-300">
                             <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                             <span className="relative">Wishlist</span>
                         </button>

@@ -1,8 +1,8 @@
 import toast from 'react-hot-toast';
 
-const getToLocalStorage = () => {
+const getToLocalStorage = (name) => {
     let storedItems = [];
-    const getStoredItems = localStorage.getItem('books');
+    const getStoredItems = localStorage.getItem(name);
 
     if (getStoredItems) {
         storedItems = JSON.parse(getStoredItems);
@@ -12,14 +12,14 @@ const getToLocalStorage = () => {
     return storedItems;
 };
 
-const saveToLocalStorage = (book) => {
-    const storedBooks = getToLocalStorage();
+const saveToLocalStorage = (book, name) => {
+    const storedBooks = getToLocalStorage(name);
 
     const isExist = storedBooks.find(b => b.bookId == book.bookId);
 
     if (!isExist) {
         storedBooks.push(book);
-        localStorage.setItem('books', JSON.stringify(storedBooks));
+        localStorage.setItem(name, JSON.stringify(storedBooks));
         return toast.success('Book added to your list!');
     } else {
         return toast.error('Book already exist!');
