@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { getToLocalStorage } from "../Utils/LocalStorage";
+import { getFromLocalStorage } from "../Utils/LocalStorage";
 import Loading from "../Components/Loading";
 import ListedBookCard from "../Components/ListedBookCard";
-import WishlistBooksCard from "../Components/WishlistBooksCard";
 
 const ListesBooks = () => {
     const [readsBooks, setReadsBooks] = useState([]);
@@ -11,12 +10,12 @@ const ListesBooks = () => {
     const [tab, setTab] = useState('read-books')
 
     useEffect(() => {
-        const storedBooks = getToLocalStorage('reads');
+        const storedBooks = getFromLocalStorage('reads');
         setReadsBooks(storedBooks);
     }, []);
 
     useEffect(() => {
-        const storedBooks = getToLocalStorage('wishlist');
+        const storedBooks = getFromLocalStorage('wishlist');
         setWishBooks(storedBooks);
     }, []);
 
@@ -31,7 +30,7 @@ const ListesBooks = () => {
 
     return (
         <div>
-            <div className="w-1/4 my-4">
+            <div className="md:w-1/4 my-4">
                 <div role="tablist" className="tabs tabs-lifted">
                     <a onClick={() => handleActiveTab(0)} role="tab" className={`${index === 0 ? 'tab tab-active' : 'tab'}`}>Read Books</a>
                     <a onClick={() => handleActiveTab(1)} role="tab" className={`${index === 1 ? 'tab tab-active' : 'tab'}`}>Wishlist Books</a>

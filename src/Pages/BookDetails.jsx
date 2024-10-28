@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from './../Components/Loading';
-import { saveToLocalStorage } from "../Utils/LocalStorage";
+import { saveToLocalStorage, getFromLocalStorage } from "../Utils/LocalStorage";
+import toast from "react-hot-toast";
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -29,7 +30,17 @@ const BookDetails = () => {
     };
 
     const handleSetToLocalStorage = (bk, name) => {
-        saveToLocalStorage(bk, name)
+        const storedReadsBooks = getFromLocalStorage('reads');
+        
+        if (name === 'wishlist') {
+            const isExists = storedReadsBooks.find(book => book.bookId === bk.bookId);
+
+            if (isExists) {
+                return toast.error('Already read this book!');
+            }
+        }
+
+        saveToLocalStorage(bk, name);
     };
 
     return (

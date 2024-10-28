@@ -3,6 +3,7 @@ import { FaCalendarAlt, FaUser, FaFileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ListedBookCard = ({ book }) => {
+
     return (
         <div>
             {/* Cards */}

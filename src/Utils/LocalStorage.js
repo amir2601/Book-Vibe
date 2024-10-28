@@ -1,6 +1,6 @@
 import toast from 'react-hot-toast';
 
-const getToLocalStorage = (name) => {
+const getFromLocalStorage = (name) => {
     let storedItems = [];
     const getStoredItems = localStorage.getItem(name);
 
@@ -13,7 +13,7 @@ const getToLocalStorage = (name) => {
 };
 
 const saveToLocalStorage = (book, name) => {
-    const storedBooks = getToLocalStorage(name);
+    const storedBooks = getFromLocalStorage(name);
 
     const isExist = storedBooks.find(b => b.bookId == book.bookId);
 
@@ -27,4 +27,10 @@ const saveToLocalStorage = (book, name) => {
 
 };
 
-export { getToLocalStorage, saveToLocalStorage };
+const removeFromLocalStorage = (id, name) => {
+    const storedBooks = getFromLocalStorage(name);
+    const remainingBooks = storedBooks.filter(b => b.bookId != id);
+    localStorage.setItem(name, JSON.stringify(remainingBooks));
+};
+
+export { getFromLocalStorage, saveToLocalStorage, removeFromLocalStorage };
